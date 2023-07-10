@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'college pofile.css' %}">
+    <title>Title</title>
+</head>
+<h1>PROFILE</h1>
+<body style="background-image:url('{% static 'PRO.jpg' %}');background-repeat:no-repeat;background-size:100%">
+<div>
+{% for i in r %}
+    <h3>COLLEGE NAME</h3>
+    {{ i.college_name }}<br>
+    <h3>USERNAME</h3>
+    {{ i.username }}<br>
+    <h3>PASSWORD</h3>
+    {{ i.password }}<br><br>
+    <button><a href="edit1">edit</a></button>
+    <button><a href="delete">delete</a></button>
+  {% endfor %}
+</div>
+</body>
+</html>

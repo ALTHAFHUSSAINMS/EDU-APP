@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image:url('{% static 'bg8.jpg' %}');background-repeat:no-repeat;background-size:100%">
+<table border="10">
+    <thead>
+        <tr>
+            <th>NAME OF COURSE</th>
+            <th>NAME OF COLLEGE</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in r %}
+        <tr>
+            <td>{{ i.course }}</td>
+            <td>{{ i.college }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

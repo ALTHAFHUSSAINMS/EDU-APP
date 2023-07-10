@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="s1update" method="POST">
+    {% csrf_token %}
+    {% for science in r %}
+    <h3>COURSE NAME<input type="text" name="n1" value="{{science.course}}"></h3>
+    <h3>COLLEGE NAME<input type="text" name="n2" value="{{science.college}}"></h3>
+    <p><input type="submit" value="UPDATE"></p>
+    {% endfor %}
+</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'student profile.css' %}">
+    <title>Title</title>
+</head>
+<h1>PROFILE</h1>
+<body style="background-image:url('{% static 'PRO.jpg' %}');background-repeat:no-repeat;background-size:100%">
+<div class="container">
+  {% for i in r %}
+    <h3>NAME</h3>
+    {{ i.name }}<br>
+    <h3>DATE OF BIRTH</h3>
+    {{ i.date_of_birth }}<br>
+    <h3>MOBILE NUMBER</h3>
+    {{ i.mobile }}<br>
+    <h3>EMAIL ID</h3>
+    {{ i.email_id }}<br>
+    <h3>COURSE NAME</h3>
+    {{ i.course_name }}<br>
+    <h3>MARK</h3>
+    {{ i.mark }}<br>
+    <h3>USERNAME</h3>
+    {{ i.username }}<br>
+    <h3>PASSWORD</h3>
+    {{ i.password }}<br><br>
+    <button><a href="edit">edit</a></button>
+    <button><a href="delete">delete</a></button>
+  {% endfor %}
+</div>
+</body>
+</html>

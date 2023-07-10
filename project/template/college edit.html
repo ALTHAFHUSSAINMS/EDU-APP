@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'collegereg.css' %}">
+    <title>Title</title>
+</head>
+<body bgcolor="  #eb984e  ">
+<form action="update1" method="POST">
+    {% csrf_token %}
+    {% for i in r %}
+    <h3>COLLEGE NAME<input type="text" name="n1" value="{{i.college_name}}"></h3>
+    <h3>USERNAME<input type="text" name="n2" value="{{i.username}}"></h3>
+    <h3>PASSWORD<input type="password" value="{{i.password}}" placeholder="EX:Joe@#123" pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" name="n3"></h3>
+    <p><input type="submit" value="UPDATE"></p>
+    {% endfor %}
+</form>
+</body>
+</html>

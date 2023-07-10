@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'admincreate.css' %}">
+    <title>Title</title>
+</head>
+<body style="background-image:url('{% static 'bg4.jpg' %}');background-repeat:no-repeat;background-size:100%">
+<form class="f1" action="science1" method="POST">
+    {% csrf_token %}
+    <h2>SCIENCE</h2>
+    <h3>COURSE NAME<input type="text" name="n1"></h3>
+    <h3>COLLEGE NAME<input type="text" name="n2"></h3>
+    <p><input type="submit" value="ADD"><button><a href="view1">VIEW</a></button></p>
+</form>
+<form class="f2" action="commerce1" method="POST">
+    {% csrf_token %}
+    <h2>COMMERCE</h2>
+    <h3>COURSE NAME<input type="text" name="n1"></h3>
+    <h3>COLLEGE NAME<input type="text" name="n2"></h3>
+    <p><input type="submit" value="ADD"><button><a href="view2">VIEW</a></button></p>
+</form>
+<form class="f3" action="literature1" method="POST">
+    {% csrf_token %}
+    <h2>LITERATURE</h2>
+    <h3>COURSE NAME<input type="text" name="n1"></h3>
+    <h3>COLLEGE NAME<input type="text" name="n2"></h3>
+    <p><input type="submit" value="ADD"><button><a href="view3">VIEW</a></button></p>
+</form>
+<form class="f4" action="humanities1" method="POST">
+    {% csrf_token %}
+    <h2>HUMANITIES</h2>
+    <h3>COURSE NAME<input type="text" name="n1"></h3>
+    <h3>COLLEGE NAME<input type="text" name="n2"></h3>
+    <p><input type="submit" value="ADD"><button><a href="view4">VIEW</a></button></p>
+</form>
+<form class="f5" action="finearts1" method="POST">
+    {% csrf_token %}
+    <h2>FINE ARTS</h2>
+    <h3>COURSE NAME<input type="text" name="n1"></h3>
+    <h3>COLLEGE NAME<input type="text" name="n2"></h3>
+    <p><input type="submit" value="ADD"><button><a href="view5">VIEW</a></button></p>
+</form>
+<form class="f6" action="journalism1" method="POST">
+    {% csrf_token %}
+    <h2>JOURNALISM</h2>
+    <h3>COURSE NAME<input type="text" name="n1"></h3>
+    <h3>COLLEGE NAME<input type="text" name="n2"></h3>
+    <p><input type="submit" value="ADD"><button><a href="view6">VIEW</a></button></p>
+</form>
+<form class="f7" action="engineering1" method="POST">
+    {% csrf_token %}
+    <h2>ENGINEERING</h2>
+    <h3>COURSE NAME<input type="text" name="n1"></h3>
+    <h3>COLLEGE NAME<input type="text" name="n2"></h3>
+    <p><input type="submit" value="ADD"><button><a href="view7">VIEW</a></button></p>
+</form>
+<form class="f8" action="low1" method="POST">
+    {% csrf_token %}
+    <h2>LAW</h2>
+    <h3>COURSE NAME<input type="text" name="n1"></h3>
+    <h3>COLLEGE NAME<input type="text" name="n2"></h3>
+    <p><input type="submit" value="ADD"><button><a href="view8">VIEW</a></button></p>
+</form>
+</body>
+</html>
+

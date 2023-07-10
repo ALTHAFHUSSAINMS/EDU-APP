@@ -1,0 +1,19 @@
+a{
+    text-decoration:None;
+    text-align:center;
+    position:relative;
+    top:5px;
+    font:bold;
+    color:indigo;
+    }
+a:hover{
+    color:blue;
+    }
+h1{
+    background-color:grey;
+    font-size:60px;
+    font:bold;
+    color:indigo;
+    text-align:center;
+    }
+h3{outline:solid white;width:150px;height:30px;background-color:grey;text-align:center}

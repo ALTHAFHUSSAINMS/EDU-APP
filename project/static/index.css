@@ -1,0 +1,28 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  background-color:white;
+  position:relative;
+  left:70px;
+  top:50px;
+  color:black;
+}
+
+td{
+  border: 5px solid black;
+  text-align: left;
+  padding: 10px;
+}
+
+th{
+  padding: 15px;
+  border:5px solid black;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+button{position:relative;left:70px}
+a{text-decoration:none}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" href="{% static 'log.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body style="background-image:url('{% static 'bg7.jpg' %}');background-repeat:no-repeat;background-size:100%">
+<form  action="log" method="POST">
+    {% csrf_token %}
+    <h3>USERNAME</h3>
+    <input type="text" name="n1"><br>
+
+    <h3>PASSWORD</h3>
+    <input type="password" name="n2"><br>
+    <input type="submit" value="LOGIN">
+</form>
+</body>
+</html>

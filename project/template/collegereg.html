@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'collegereg.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image:url('{% static 'bg9.jpg' %}');background-repeat:no-repeat;background-size:100%">
+<form action="create1" method="POST">
+    {% csrf_token %}
+    <h3>COLLEGE NAME<input type="text" name="n1"></h3>
+    <h3>USERNAME<input type="text" name="n2"></h3>
+    <h3>PASSWORD<input type="password" placeholder="EX:Joe@#123" pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" name="n3"></h3>
+    <p><input type="submit" value="REGISTER"></p>
+</form>
+</body>
+</html>

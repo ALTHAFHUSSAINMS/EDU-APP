@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>Title</title>
+</head>
+<body bgcolor=" #a3e4d7 ">
+<table border="10">
+    <thead>
+        <tr>
+            <th>NAME OF COURSE</th>
+            <th>NAME OF COLLEGE</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in r %}
+        <form method="post" action="s1delete">
+            {% csrf_token %}
+        <tr>
+            <input type="text" name="n1" value="{{i.id}}" hidden>
+            <td>{{ i.course }}</td>
+            <td>{{ i.college }}</td>
+            <td><input type="submit" value="delete">
+            </td>
+        </tr>
+            </form>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

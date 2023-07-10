@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>Title</title>
+</head>
+<body bgcolor=" #a3e4d7 ">
+<table border="10">
+    <thead>
+        <tr>
+            <th>NAME OF COURSE</th>
+            <th>NAME OF COLLEGE</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in r %}
+        <tr>
+            <td>{{ i.course }}</td>
+            <td>{{ i.college }}</td>
+            <td><button><a href="s5delete">delete</a></button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

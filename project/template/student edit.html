@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'student reg.css' %}">
+  <title>Title</title>
+</head>
+<body bgcolor=" #a3e4d7 ">
+<form action="update" method="POST">
+    {% csrf_token %}
+    {% for i in r %}
+    <br><h3>NAME<br><input type="text" name="n1" value="{{i.name}}"></h3>
+    <h3>DOB<br><input type="date" name="n2" value="{{ i.date_of_birth }}"></h3>
+    <h3>M0BILE NO<br><input type="text" name="n3" value="{{ i.mobile }}" maxlength="10" minlength="10"></h3>
+    <h3>EMAIL<br><input type="text" name="n4" value="{{ i.email_id }}"></h3>
+    <h3>COURSE IN PLUS TWO<br><select id="course" name="n5">
+    <option value="science">Science</option>
+    <option value="commerce">Commerce</option>
+    <option value="humanities">Humanities</option>
+    <option value="computer science">Computer science</option>
+    <option value="vhse">Vhse</option>
+    <option value="other">Other</option>
+    </select></h3>
+    <h3>MARK IN PERCENTAGE<br><select id="mark" name="n6">
+    <option value="50-60%">50-60%</option>
+    <option value="61-70%">61-70%</option>
+    <option value="71-80%">71-80%</option>
+    <option value="81-90%">81-90%</option>
+    <option value="91-100%">91-100%</option>
+    </select></h3>
+    <h3>USERNAME<br><input type="text" name="n7" value="{{ i.username }}"></h3>
+    <h3>PASSWORD<br><input class="pass" type="password" placeholder="EX:Joe@#123" pattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" name="n8" value="{{ i.password }}"></h3>
+    <p><input type="submit" value="update"></p>
+    {% endfor %}
+</body>
+</html>

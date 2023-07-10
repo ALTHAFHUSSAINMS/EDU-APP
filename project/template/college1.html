@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+    <link rel="stylesheet" href="{% static 'college 1.css' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<ul>
+    <li><a href="profile1">MY PROFILE</a></li>
+    <li><a class="log" href="log" >LOGOUT</a></li>
+</ul>
+<body style="background-image:url('{% static 'bg7.jpg' %}');background-repeat:no-repeat;background-size:100%">
+<h1>SEARCH FOR THE BEST</h1>
+<form action="find" method="POST">
+    {% csrf_token %}
+    <h3>COURSE IN PLUS TWO<br><select id="course" name="n1">
+    <option value="science">Science</option>
+    <option value="commerce">Commerce</option>
+    <option value="humanities">Humanities</option>
+    <option value="computer science">Computer science</option>
+    <option value="vhse">Vhse</option>
+    <option value="other">Other</option>
+    </select></h3>
+    <h3>MARK IN PERCENTAGE<br><select id="mark" name="n2">
+    <option value="50-60%">50-60%</option>
+    <option value="61-70%">61-70%</option>
+    <option value="71-80%">71-80%</option>
+    <option value="81-90%">81-90%</option>
+    <option value="91-100%">91-100%</option>
+    </select></h3>
+    <input type="submit" value="FIND">
+    <table border="10">
+    <thead>
+        <th>NAME</th>
+        <th>DOB</th>
+        <th>MOBILE NO</th>
+        <th>EMAIL</th>
+        <th>COURSE IN PLUS TWO</th>
+        <th>MARK</th>
+    </thead>
+    {% for i in r %}
+    <tbody>
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.date_of_birth}}</td>
+        <td>{{i.mobile}}</td>
+        <td>{{i.email_id}}</td>
+        <td>{{i.course_name}}</td>
+        <td>{{i.mark}}</td>
+</tr>
+    </tbody>
+        {% endfor %}
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table  border="10">
+    <tbody>
+        <tr>
+            <td>NAME</td>
+            <td>DOB</td>
+            <td>MOBILE NO</td>
+            <td>EMAIL</td>
+            <td>COUSRE NAME</td>
+            <td>MARK</td>
+            <td>USERNAME</td>
+            <td>PASSWORD</td>
+            <td>ACTION</td>
+        </tr>
+    </tbody>
+    <tbody>
+        {% for i in r %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.date_of_birth }}</td>
+            <td>{{ i.mobile }}</td>
+            <td>{{ i.email_id }}</td>
+            <td>{{ i.course_name }}</td>
+            <td>{{ i.mark }}</td>
+            <td>{{ i.username }}</td>
+            <td>{{ i.password }}</td>
+            <td>
+                <a href="edit/{{ student.id }}">edit</a>
+                <a href="delete/{{ student.id }}">delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
